@@ -13,11 +13,11 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
+    if (!("theme" in localStorage)) {
+      localStorage.theme = "";
+    }
+
+    if (localStorage.theme === "dark") {
       setIsDarkMode(true);
     } else {
       setIsDarkMode(false);
