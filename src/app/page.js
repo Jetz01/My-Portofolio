@@ -10,7 +10,7 @@ import { ToastContainer } from "react-toastify";
 import Experience from "./components/Experience";
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     if (
