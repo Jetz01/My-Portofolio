@@ -29,7 +29,7 @@ const Work = () => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.9 }}
-        className="mx-auto flex flex-row items-center justify-center my-5 gap-5"
+        className="mx-auto flex flex-col sm:flex-row items-center justify-center my-5 gap-5"
       >
         <button
           className={`px-7 py-2 border border-gray-200 rounded-full font-Ovo text-lg
@@ -51,7 +51,7 @@ const Work = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 1.1 }}
-        className="grid grid-cols-2 xl:grid-cols-4 my-10 gap-5 dark:text-black"
+        className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 my-10 gap-5 dark:text-black"
       >
         {projectStatus === "client"
           ? workData.client_project.map((project, index) => (
@@ -70,10 +70,12 @@ const Work = () => {
                 >
                   <div className="w-[75%]">
                     <h2 className="font-semibold text-xs md:text-base">
-                      {project.title} -{" "}
-                      <span className="font-normal">{project.description}</span>
+                      {project.title}
+                      <span className="hidden ml-2 font-normal text-xs md:inline md:text-base">
+                        - {project.description}
+                      </span>
                     </h2>
-                    <p className="text-gray-700 text-xs md:text-base">
+                    <p className="hidden text-gray-700 text-xs sm:inline md:text-base">
                       {project.tech}
                     </p>
                   </div>
@@ -103,12 +105,12 @@ const Work = () => {
                 >
                   <div className="w-[75%]">
                     <h2 className="font-semibold text-xs md:text-base">
-                      {project.title} -{" "}
-                      <span className="font-normal text-xs md:text-base">
-                        {project.description}
+                      {project.title}
+                      <span className="hidden ml-2 font-normal text-xs md:inline md:text-base">
+                        - {project.description}
                       </span>
                     </h2>
-                    <p className="text-gray-700 text-xs md:text-base">
+                    <p className="hidden text-gray-700 text-xs sm:inline md:text-base">
                       {project.tech}
                     </p>
                   </div>
