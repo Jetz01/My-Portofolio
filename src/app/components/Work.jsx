@@ -69,17 +69,19 @@ const Work = () => {
                   className="items-center text-start absolute bottom-5 left-1/2 flex w-10/12 border -translate-x-1/2 justify-between rounded-md bg-white px-5 py-3 duration-500 group-hover:bottom-7"
                 >
                   <div className="w-[75%]">
-                    <h2 className="font-semibold">
+                    <h2 className="font-semibold text-xs md:text-base">
                       {project.title} -{" "}
                       <span className="font-normal">{project.description}</span>
                     </h2>
-                    <p className="text-sm text-gray-700">{project.tech}</p>
+                    <p className="text-gray-700 text-xs md:text-base">
+                      {project.tech}
+                    </p>
                   </div>
-                  <div className="flex aspect-square w-9 h-9 items-center justify-center rounded-full border border-black shadow-[2px_2px_0_#000] transition group-hover:bg-lime-300">
+                  <div className="flex aspect-square w-5 h-5 sm:w-9 sm:h-9 items-center justify-center rounded-full border border-black shadow-[2px_2px_0_#000] transition group-hover:bg-lime-300">
                     <Image
                       src={assets.send_icon}
                       alt="send icon"
-                      className="w-5 pointer-events-none"
+                      className="w-3 sm:w-5 pointer-events-none"
                     />
                   </div>
                 </a>
@@ -100,17 +102,21 @@ const Work = () => {
                   className="item-center absolute bottom-5 left-1/2 flex w-10/12 border -translate-x-1/2 justify-between rounded-md bg-white px-5 py-3 duration-500 group-hover:bottom-7"
                 >
                   <div className="w-[75%]">
-                    <h2 className="font-semibold">
+                    <h2 className="font-semibold text-xs md:text-base">
                       {project.title} -{" "}
-                      <span className="font-normal">{project.description}</span>
+                      <span className="font-normal text-xs md:text-base">
+                        {project.description}
+                      </span>
                     </h2>
-                    <p className="text-sm text-gray-700">{project.tech}</p>
+                    <p className="text-gray-700 text-xs md:text-base">
+                      {project.tech}
+                    </p>
                   </div>
-                  <div className="my-2 flex aspect-square h-9 w-9 items-center justify-center rounded-full border border-black shadow-[2px_2px_0_#000] transition group-hover:bg-lime-300">
+                  <div className="my-2 flex aspect-square  w-5 h-5 sm:w-9 sm:h-9 items-center justify-center rounded-full border border-black shadow-[2px_2px_0_#000] transition group-hover:bg-lime-300">
                     <Image
                       src={assets.send_icon}
                       alt="send icon"
-                      className="w-5 pointer-events-none"
+                      className="w-3 sm:w-5 pointer-events-none"
                     />
                   </div>
                 </a>

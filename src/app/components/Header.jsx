@@ -25,7 +25,7 @@ function Header() {
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="mb-2 flex items-end gap-2 font-Ovo text-xl md:text-2xl"
+        className="mb-2 flex items-center gap-2 font-Ovo text-xl md:text-2xl"
       >
         Hi! I'm Tubagus Aji Prasetia Iskandar
         <Image src={assets.hand_icon} alt="hand-icon" className="w-6" />

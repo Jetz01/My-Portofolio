@@ -27,7 +27,7 @@ const Experience = () => {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7 }}
-            className="text-xl font-Ovo mb-10"
+            className="text-xl font-Ovo my-10"
           >
             Technology
           </motion.h3>
@@ -56,7 +56,7 @@ const Experience = () => {
           transition={{ duration: 0.7, delay: 0.7 }}
           className="text-center w-full"
         >
-          <motion.h3 className="text-xl font-Ovo mb-10">
+          <motion.h3 className="text-xl font-Ovo my-10">
             Work Experience
           </motion.h3>
           <motion.div
