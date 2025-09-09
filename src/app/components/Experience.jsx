@@ -51,15 +51,13 @@ const Experience = () => {
       {workData.experiences.map((experience, index) => (
         <div
           key={experience.id}
-          className="grid grid-cols-1 lg:grid-cols-[1fr_4px_1fr] justify-items-center"
+          className="grid grid-cols-1 grid-rows-1 lg:grid-cols-[1fr_4px_1fr] justify-items-center"
         >
           <div
-            className={`hidden row-start-1 col-start-2 lg:block bg-black dark:bg-white w-full`}
+            className={`row-span-full col-start-2 hidden lg:block bg-black dark:bg-white w-[2px]`}
           >
-            <div className="relative text-center rounded-full ">
-              <div className="absolute -right-2 top-[5em] bg-black dark:bg-white w-5 h-5 rounded-full">
-                -
-              </div>
+            <div className="relative">
+              <div className="absolute left-1/2 top-10 -translate-x-1/2 bg-black dark:bg-white w-5 h-5 rounded-full"></div>
             </div>
           </div>
 
