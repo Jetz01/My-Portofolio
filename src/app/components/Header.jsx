@@ -1,4 +1,4 @@
-import { assets } from "@/assets/assets";
+import { assetList } from "../../assets/assets";
 import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
@@ -16,7 +16,7 @@ function Header() {
         className="mb-5"
       >
         <Image
-          src={assets.user_profile}
+          src={assetList.user_profile}
           alt="Profile"
           className="w-48 rounded-full border border-black bg-[#E5E1DE]"
         />
@@ -28,7 +28,7 @@ function Header() {
         className="mb-2 flex items-center gap-2 font-Ovo text-xl md:text-2xl"
       >
         Hi! I'm Tubagus Aji Prasetia Iskandar
-        <Image src={assets.hand_icon} alt="hand-icon" className="w-6" />
+        {/* <Image src={assetList.hand_icon} alt="hand-icon" className="w-6" /> */}
       </motion.h3>
       <motion.h1
         initial={{ y: -30, opacity: 0 }}
@@ -47,7 +47,11 @@ function Header() {
           className="flex items-center gap-2 rounded-full border border-white bg-black px-10 py-3 text-white dark:bg-transparent"
         >
           Contact Me
-          <Image src={assets.right_arrow_white} alt="Profile" className="w-4" />
+          <Image
+            src={assetList.right_arrow_white}
+            alt="Profile"
+            className="w-4"
+          />
         </motion.a>
         <motion.a
           initial={{ y: 30, opacity: 0 }}
@@ -58,7 +62,7 @@ function Header() {
           className="flex items-center gap-2 rounded-full border border-gray-500 bg-white px-10 py-3 dark:text-black"
         >
           My Resume
-          <Image src={assets.download_icon} alt="Profile" className="w-4" />
+          <Image src={assetList.download_icon} alt="Profile" className="w-4" />
         </motion.a>
       </div>
     </div>

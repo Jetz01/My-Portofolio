@@ -12,8 +12,8 @@ const ovo = Ovo({
 });
 
 export const metadata = {
-  title: "Tubagus Aji - Portofolio",
-  description: "Tubagus Aji - Portofolio",
+  title: "Tubagus Aji - Portfolio",
+  description: "Tubagus Aji - Portfolio",
 };
 
 export default function RootLayout({ children }) {

@@ -41,8 +41,9 @@ import world from "./world.png";
 import gmail from "./gmail.png";
 import education from "./education.png";
 import linxchat_logo from "./linxchat.png";
+import polban_logo from "./polban.jpg";
 
-export const assets = {
+export const assetList = {
   user_image,
   user_profile,
   html,
@@ -86,81 +87,137 @@ export const assets = {
   gmail,
   education,
   linxchat_logo,
+  polban_logo,
 };
 
 export const workData = {
-  client_project: [
+  projects: [
     {
       id: 1,
-      title: "PAMIOL",
-      description: "Web App",
-      tech: "Bootstrap, PHP, MySQL",
+      type: "client",
+      title: "Polban Audit Mutu Internal (PAMIOL)",
+      description: "Web Application",
+      technologies: ["Bootstrap", "PHP", "MySQL"],
       bgImage: "/Pamiol_webapp.png",
-      type: "blank",
       href: "https://drive.google.com/drive/folders/1gz06C_w-zHYCfKs4obSzw-UbIcaB0xjb?usp=sharing",
     },
     {
       id: 2,
       title: "Linxchat",
-      description: "Web App",
-      tech: "Tailwind, Next.js, Typescript",
+      type: "client",
+      description: "Web Application",
+      technologies: ["Tailwind", "Next.js", "Typescript", " Socket.io"],
       bgImage: "/Linxchat_webapp.png",
-      type: "blank",
       href: "https://drive.google.com/drive/folders/1KLOixaM36vDv6qGK81tUi9bLSeGqeYt1?usp=sharing",
+    },
+    {
+      id: 3,
+      title: "Dunia Bangun Datar",
+      type: "client",
+      description: "Educational Games",
+      technologies: ["Scratch"],
+      bgImage: "/scratch-bangun-datar.png",
+      href: "https://scratch-bangun-datar.vercel.app/",
+    },
+    {
+      id: 4,
+      title: "Segi Banyak Beraturan",
+      type: "client",
+      description: "Educational Games",
+      technologies: ["Scratch"],
+      bgImage: "/scratch-segi-banyak-beraturan.png",
+      href: "https://segi-banyak-beraturan.vercel.app/",
+    },
+    {
+      id: 5,
+      title: "Thread App",
+      type: "personal",
+      description: "Web Application",
+      technologies: ["CSS", "React.js", "Redux", "Rest APIs"],
+      bgImage: "/thread-app.png",
+      href: "https://threads-app-murex-psi.vercel.app/",
+    },
+    {
+      id: 6,
+      title: "Notes App",
+      type: "personal",
+      description: "Web Application",
+      technologies: ["CSS", "React.js"],
+      bgImage: "/personal-notes-app.png",
+      href: "https://personal-notes-app-roan.vercel.app/",
+    },
+    {
+      id: 7,
+      title: "BBC Clone",
+      type: "personal",
+      description: "Web Application",
+      technologies: ["HTML", "CSS"],
+      bgImage: "/BBC-clone.png",
+      href: "https://bbcclone-tan.vercel.app/",
     },
   ],
 
-  personal_project: [
+  experiences: [
     {
       id: 1,
-      title: "BBC Clone",
-      description: "Web App",
-      tech: "HTML, CSS",
-      bgImage: "/BBC-clone.png",
-      type: "blank",
-      href: "https://bbcclone-tan.vercel.app/",
+      image: assetList.linxchat_logo,
+      position: "Frontend Developer",
+      status: "Internship",
+      company: "PT Linxchat Global Indonesia",
+      date: "Jun 2023 - Sep 2023",
+      descriptions: [
+        "Developed social commerce web application",
+        "Built real-time chat features between users",
+        "Integrate web application with REST APIs and Websocket",
+        "Performed manual testing",
+      ],
     },
     {
       id: 2,
-      title: "Notes App",
-      description: "Web App",
-      tech: "CSS, React.js, Vite",
-      bgImage: "/personal-notes-app.png",
-      type: "blank",
-      href: "https://personal-notes-app-roan.vercel.app/",
+      image: assetList.polban_logo,
+      position: "Fullstack Developer",
+      status: "Part Time",
+      company: "P2MPP - Politeknik Negeri Bandung",
+      date: "Sep 2024 - Dec 2024",
+      descriptions: [
+        "Developed automatic scoring feature",
+        "Built data visualization with bar chart and radar chart",
+        "Redisigned data storage system",
+        "Improved database schema to ensure data consistency",
+      ],
     },
   ],
 };
 
 export const toolsData = [
-  assets.html,
-  assets.css,
-  assets.javascript,
-  assets.php,
-  assets.bootstrap,
-  assets.tailwind,
-  assets.reactjs,
-  assets.nextjs,
-  assets.laravel,
-  assets.mysql,
-  assets.git,
-  assets.figma,
+  assetList.html,
+  assetList.css,
+  assetList.javascript,
+  assetList.php,
+  assetList.bootstrap,
+  assetList.tailwind,
+  assetList.reactjs,
+  assetList.nextjs,
+  assetList.laravel,
+  assetList.mysql,
+  assetList.git,
+  assetList.figma,
 ];
 
 export const socialMedia = [
   {
     name: "LinkedIn",
-    icon: assets.linkedin,
+    icon: assetList.linkedin,
     href: "https://www.linkedin.com/in/tubagus-aji-prasetia-iskandar-a3a917246/",
   },
   {
     name: "Github",
-    icon: assets.github,
+    icon: assetList.github,
     href: "https://github.com/Tubagus31",
   },
   {
     name: "Instagram",
-    icon: assets.instagram,
+    icon: assetList.instagram,
     href: "https://instagram.com/tuba_313",
   },
 ];

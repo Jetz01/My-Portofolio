@@ -1,4 +1,4 @@
-import { assets, infoList, socialMedia, toolsData } from "@/assets/assets";
+import { assetList, socialMedia } from "../../assets/assets";
 import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
@@ -34,7 +34,7 @@ const About = () => {
           className="w-64 max-w-none rounded-3xl sm:w-80"
         >
           <Image
-            src={assets.user_image}
+            src={assetList.user_image}
             alt="user"
             className="w-full rounded-3xl bg-[#E5E1DE]"
           />
@@ -52,7 +52,7 @@ const About = () => {
             className="max-2-2xl mb-5 font-Ovo text-justify text-lg"
           >
             I am an Informatics Engineering graduate with an Associate Degree
-            from Politeknik Negeri Bandung who has an interest in web and mobile
+            from Politeknik Negeri Bandung who has an interest in web
             development, especially in the field of Frontend Developer. I have
             experience in entry-level web development, such as creating user
             interfaces using frontend technologies like HTML, CSS, and
@@ -70,7 +70,7 @@ const About = () => {
           >
             <li className="flex gap-5 items-center mb-2">
               <Image
-                src={assets.world}
+                src={assetList.world}
                 alt="world icon"
                 className="w-10 border-1 border-white rounded-full bg-white"
               />
@@ -78,7 +78,7 @@ const About = () => {
             </li>
             <li className="flex gap-5 items-center mb-2">
               <Image
-                src={assets.education}
+                src={assetList.education}
                 alt="world icon"
                 className="w-11 border border-1 border-gray-300 p-1 rounded-full bg-white"
               />
@@ -86,7 +86,7 @@ const About = () => {
             </li>
             <li className="flex gap-5 items-center mb-2">
               <Image
-                src={assets.gmail}
+                src={assetList.gmail}
                 alt="world icon"
                 className="w-10 border-1 border-white rounded-full bg-white"
               />

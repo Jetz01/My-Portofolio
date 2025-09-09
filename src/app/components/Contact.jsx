@@ -1,5 +1,5 @@
 "use client";
-import { assets } from "@/assets/assets";
+import { assetList } from "../../assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "motion/react";
@@ -128,7 +128,7 @@ const Contact = ({ isDarkMode }) => {
         >
           Submit now
           <Image
-            src={assets.right_arrow_white}
+            src={assetList.right_arrow_white}
             alt="arrow icon"
             className="w-4"
           />

@@ -1,5 +1,5 @@
 "use client";
-import { assets } from "@/assets/assets";
+import { assetList } from "../../assets/assets";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -29,7 +29,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <>
       <div className="fixed right-0 top-0 -z-10 w-11/12 translate-y-[-80%] dark:hidden">
-        <Image src={assets.header_bg_color} alt="background" />
+        <Image src={assetList.header_bg_color} alt="background" />
       </div>
       <nav
         className={`fixed z-50 flex w-full items-center justify-between px-5 py-4 lg:px-8 xl:px-[8%] ${isScroll ? "bg-white bg-opacity-50 shadow-sm backdrop-blur-lg dark:bg-darkTheme dark:shadow-white/20" : ""}`}
@@ -58,7 +58,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </li>
           <li>
             <a className="font-Ovo" href="/#work">
-              Work
+              Project
             </a>
           </li>
           <li>
@@ -71,7 +71,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         <div className="flex items-center gap-4">
           <button onClick={() => setIsDarkMode((prev) => !prev)}>
             <Image
-              src={!isDarkMode ? assets.moon_icon : assets.sun_icon}
+              src={!isDarkMode ? assetList.moon_icon : assetList.sun_icon}
               alt="theme"
               className="w-6"
             />
@@ -82,7 +82,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           >
             Contact
             <Image
-              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
+              src={
+                isDarkMode ? assetList.arrow_icon_dark : assetList.arrow_icon
+              }
               className="w-3"
               alt="arrow"
             />
@@ -90,7 +92,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
           <button className="ml-3 block md:hidden" onClick={openMenu}>
             <Image
-              src={isDarkMode ? assets.menu_white : assets.menu_black}
+              src={isDarkMode ? assetList.menu_white : assetList.menu_black}
               alt="menu"
               className="w-6"
             />
@@ -105,7 +107,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <Image
-              src={isDarkMode ? assets.close_white : assets.close_black}
+              src={isDarkMode ? assetList.close_white : assetList.close_black}
               alt="close"
               className="w-5 cursor-pointer"
             />
@@ -128,7 +130,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </li>
           <li>
             <a className="font-Ovo" onClick={closeMenu} href="/#work">
-              Work
+              Project
             </a>
           </li>
           <li>

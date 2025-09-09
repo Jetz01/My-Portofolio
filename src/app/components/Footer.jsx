@@ -1,4 +1,4 @@
-import { assets, socialMedia } from "@/assets/assets";
+import { assetList, socialMedia } from "../../assets/assets";
 import Image from "next/image";
 import React from "react";
 
@@ -10,7 +10,7 @@ const Footer = ({ isDarkMode }) => {
 
         <div className="mx-auto flex w-max items-center gap-2">
           <Image
-            src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon}
+            src={isDarkMode ? assetList.mail_icon_dark : assetList.mail_icon}
             alt="mail"
             className="w-6"
           />
