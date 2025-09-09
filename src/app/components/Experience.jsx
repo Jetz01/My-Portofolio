@@ -48,13 +48,13 @@ const Experience = () => {
             ))}
           </motion.ul>
         </div> */}
-      {workData.experiences.map((experience) => (
+      {workData.experiences.map((experience, index) => (
         <div
           key={experience.id}
-          className="grid grid-cols-1 lg:grid-cols-[1fr_4px_1fr]  justify-items-center"
+          className="grid grid-cols-1 lg:grid-cols-[1fr_4px_1fr] justify-items-center"
         >
           <div
-            className={`hidden col-start-2 row-start-${experience.id} lg:block bg-black dark:bg-white w-full`}
+            className={`hidden row-start-1 col-start-2 lg:block bg-black dark:bg-white w-full`}
           >
             <div className="relative text-center rounded-full ">
               <div className="absolute -right-2 top-[5em] bg-black dark:bg-white w-5 h-5 rounded-full">
