@@ -11,8 +11,8 @@ const Work = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      id="work"
-      className="w-full scroll-mt-20 px-[12%] py-10"
+      id="project"
+      className="w-full scroll-mt-20 px-[8%] sm:px-[12%] py-10"
     >
       <motion.h2
         initial={{ y: -20, opacity: 0 }}
@@ -58,7 +58,7 @@ const Work = () => {
                 {project.technologies.map((technology, index) => (
                   <p
                     key={index}
-                    className="hidden text-xs text-white bg-gray-700 px-2 py-1/2 rounded-full mx-[2px] sm:inline-block"
+                    className="inline-block text-xs text-white bg-gray-700 px-2 py-1/2 rounded-full mx-[2px]"
                   >
                     {technology}
                   </p>

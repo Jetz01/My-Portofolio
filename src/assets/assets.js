@@ -187,6 +187,18 @@ export const workData = {
       ],
     },
   ],
+
+  trainings: [
+    {
+      id: 1,
+      name: "IDCamp - React Developer",
+      image: assetList.reactjs,
+      organizer: "Dicoding & Indosat Ooredoo Hutchison",
+      date: "Dec 2024 - June 2025",
+      description:
+        "IDCamp (Indosat Ooredoo Digital Camp) is a scholarship program by Indosat Ooredoo Hutchison in collaboration with Dicoding, offering training in React.js covering components, state, props, hooks, routing, and building interactive web applications.",
+    },
+  ],
 };
 
 export const toolsData = [

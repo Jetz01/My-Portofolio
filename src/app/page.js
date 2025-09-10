@@ -4,6 +4,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Training from "./components/Training";
 import Navbar from "./components/Navbar";
 import Work from "./components/Work";
 import { ToastContainer } from "react-toastify";
@@ -41,6 +42,7 @@ export default function Home() {
       <Header />
       <About />
       <Experience />
+      <Training />
       <Work />
       <Contact isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />

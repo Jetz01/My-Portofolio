@@ -11,7 +11,7 @@ const Experience = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="experience"
-      className="w-full scroll-mt-20 px-[18%] py-10 mt-10 mb-20"
+      className="w-full scroll-mt-20 py-10 mt-10 mb-20 px-[5%] sm:px-[8%] lg:px-[12%]"
     >
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -48,10 +48,10 @@ const Experience = () => {
             ))}
           </motion.ul>
         </div> */}
-      {workData.experiences.map((experience, index) => (
+      {workData.experiences.map((experience) => (
         <div
           key={experience.id}
-          className="grid grid-cols-1 grid-rows-1 lg:grid-cols-[1fr_4px_1fr] justify-items-center"
+          className="grid justify-items-center grid-rows-1 grid-cols-1 lg:grid-cols-[1fr_4px_1fr]"
         >
           <div
             className={`row-span-full col-start-2 hidden lg:block bg-black dark:bg-white w-[2px]`}
@@ -66,10 +66,10 @@ const Experience = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
             className={clsx(
-              `col-span-1 row-span-1 lg:row-start-${experience.id} px-5 w-full cursor-pointer `,
+              `col-span-1 row-span-1 lg:row-start-${experience.id} w-full cursor-pointer `,
               {
-                "lg:col-start-1": experience.id % 2 == 1,
-                "lg:col-start-3": experience.id % 2 == 0,
+                "lg:col-start-1 lg:pr-5": experience.id % 2 == 1,
+                "lg:col-start-3 lg:pl-5": experience.id % 2 == 0,
               }
             )}
           >
@@ -78,7 +78,7 @@ const Experience = () => {
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
               className={clsx(
-                "flex flex-col my-3 xl:flex-row items-center gap-5 border-[0.5px] rounded-xl border-gray-200 p-6 dark:border-white dark:bg-white dark:hover:bg-slate-100"
+                "flex flex-col xl:flex-row my-3 px-3 py-6 md:px-6 items-center gap-5 border-[0.5px] rounded-xl bg-slate-50 border-gray-200 dark:border-white dark:bg-white"
               )}
             >
               <div className="w-[20%] min-w-20">
