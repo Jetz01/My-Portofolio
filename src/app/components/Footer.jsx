@@ -19,7 +19,7 @@ const Footer = ({ isDarkMode }) => {
       </div>
 
       <div className="mx-[10%] mt-12 items-center justify-between border-t border-gray-400 py-6 text-center sm:flex">
-        <p>©2025 Tubagus Aji. All rights reserved</p>
+        <p>©2025 Tubagus Aji - All rights reserved</p>
         <ul className="mt-4 flex items-center justify-center gap-10 sm:mt-0">
           {socialMedia.map((item, index) => (
             <li key={index}>

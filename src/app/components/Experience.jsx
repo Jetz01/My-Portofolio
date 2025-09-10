@@ -1,53 +1,23 @@
 import React from "react";
 import { motion } from "motion/react";
-import { assetList, toolsData, workData } from "../../assets/assets";
+import { workData } from "../../assets/assets";
 import Image from "next/image";
 import clsx from "clsx";
 
 const Experience = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+    <div
       id="experience"
       className="w-full scroll-mt-20 py-10 mt-10 mb-20 px-[5%] sm:px-[8%] lg:px-[12%]"
     >
       <motion.h2
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.7, delay: 0.7 }}
         className="text-center font-Ovo text-3xl mb-12"
       >
         Work Experience
       </motion.h2>
-      {/* <div className="text-center w-full">
-          <motion.h3
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.7 }}
-            className="text-xl font-Ovo my-10"
-          >
-            Technology
-          </motion.h3>
-          <motion.ul
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="grid justify-items-center grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5"
-          >
-            {toolsData.map((tool, index) => (
-              <motion.li
-                whileHover={{ scale: 1.1 }}
-                key={index}
-                className="flex aspect-square cursor-pointer items-center justify-center 
-                    rounded-full border border-gray-200 duration-500 hover:-translate-y-1 w-24 xl:w-28 dark:bg-slate-100"
-              >
-                <Image src={tool} alt="Tool" className="w-16 xl:w-20" />
-              </motion.li>
-            ))}
-          </motion.ul>
-        </div> */}
       {workData.experiences.map((experience) => (
         <div
           key={experience.id}
@@ -62,8 +32,8 @@ const Experience = () => {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
             className={clsx(
               `col-span-1 row-span-1 lg:row-start-${experience.id} w-full cursor-pointer `,
@@ -113,7 +83,7 @@ const Experience = () => {
           </motion.div>
         </div>
       ))}
-    </motion.div>
+    </div>
   );
 };
 

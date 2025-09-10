@@ -33,7 +33,6 @@ const Contact = ({ isDarkMode }) => {
         transition: Bounce,
       });
     } else {
-      console.log("Error", data);
       toast.error(`${data.message}`, {
         position: "top-right",
         autoClose: 5000,

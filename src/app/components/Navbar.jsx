@@ -73,7 +73,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </li>
         </ul>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 lg:pl-[6%] xl:pl-[8%]">
           <button onClick={() => setIsDarkMode((prev) => !prev)}>
             <Image
               src={!isDarkMode ? assetList.moon_icon : assetList.sun_icon}
@@ -81,19 +81,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               className="w-6"
             />
           </button>
-          <a
-            href="#contact"
-            className="ml-4 hidden items-center gap-3 rounded-full border border-gray-500 px-10 py-2.5 font-Ovo md:flex dark:border-white/50"
-          >
-            Contact
-            <Image
-              src={
-                isDarkMode ? assetList.arrow_icon_dark : assetList.arrow_icon
-              }
-              className="w-3"
-              alt="arrow"
-            />
-          </a>
 
           <button className="ml-3 block md:hidden" onClick={openMenu}>
             <Image

@@ -1,4 +1,3 @@
-import user_image from "./user-image.png";
 import user_profile from "./user-profile.png";
 import right_arrow_white from "./right-arrow-white.png";
 import mail_icon from "./mail_icon.png";
@@ -32,19 +31,13 @@ import php from "./php.svg";
 import laravel from "./laravel.svg";
 import mysql from "./mysql.png";
 import javascript from "./javascript.svg";
-import git from "./git.png";
-import figma from "./figma.png";
 import linkedin from "./linkedin.png";
 import instagram from "./instagram.png";
-import github from "./github.png";
-import world from "./world.png";
 import gmail from "./gmail.png";
-import education from "./education.png";
 import linxchat_logo from "./linxchat.png";
 import polban_logo from "./polban.jpg";
 
 export const assetList = {
-  user_image,
   user_profile,
   html,
   nextjs,
@@ -55,8 +48,6 @@ export const assetList = {
   php,
   mysql,
   javascript,
-  git,
-  figma,
   reactjs,
   right_arrow_white,
   mail_icon,
@@ -81,11 +72,8 @@ export const assetList = {
   right_arrow_bold,
   right_arrow_bold_dark,
   linkedin,
-  github,
   instagram,
-  world,
   gmail,
-  education,
   linxchat_logo,
   polban_logo,
 };
@@ -202,18 +190,46 @@ export const workData = {
 };
 
 export const toolsData = [
-  assetList.html,
-  assetList.css,
-  assetList.javascript,
-  assetList.php,
-  assetList.bootstrap,
-  assetList.tailwind,
-  assetList.reactjs,
-  assetList.nextjs,
-  assetList.laravel,
-  assetList.mysql,
-  assetList.git,
-  assetList.figma,
+  {
+    name: "HTML",
+    image: assetList.html,
+  },
+  {
+    name: "CSS",
+    image: assetList.css,
+  },
+  {
+    name: "Javascript",
+    image: assetList.javascript,
+  },
+  {
+    name: "PHP",
+    image: assetList.php,
+  },
+  {
+    name: "Bootstrap",
+    image: assetList.bootstrap,
+  },
+  {
+    name: "Tailwind",
+    image: assetList.tailwind,
+  },
+  {
+    name: "Reactjs",
+    image: assetList.reactjs,
+  },
+  {
+    name: "Nextjs",
+    image: assetList.nextjs,
+  },
+  {
+    name: "Laravel",
+    image: assetList.laravel,
+  },
+  {
+    name: "MySQL",
+    image: assetList.mysql,
+  },
 ];
 
 export const socialMedia = [

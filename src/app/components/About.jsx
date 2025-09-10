@@ -1,7 +1,11 @@
-import { assetList, socialMedia } from "../../assets/assets";
+import { toolsData } from "../../assets/assets";
+import React, { useState } from "react";
 import Image from "next/image";
-import React from "react";
 import { motion } from "motion/react";
+import { IoSchool, IoLocationSharp } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
+import { BiSolidSchool } from "react-icons/bi";
+import clsx from "clsx";
 
 const About = () => {
   return (
@@ -10,131 +14,112 @@ const About = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="about"
-      className="w-full scroll-mt-20 px-[18%] py-10"
+      className="w-full scroll-mt-20 px-[8%] sm:px-[12%] lg:px-[15%] py-10"
     >
       <motion.h2
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-center font-Ovo text-3xl"
+        className="text-center font-Ovo text-3xl mb-6"
       >
-        About Me
+        About
       </motion.h2>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="my-16 flex w-full flex-col items-center gap-20 lg:flex-row"
-      >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="w-64 max-w-none rounded-3xl sm:w-80"
-        >
-          <Image
-            src={assetList.user_image}
-            alt="user"
-            className="w-full rounded-3xl bg-[#E5E1DE]"
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="flex-1 content-between"
-        >
+      <div className="w-full flex flex-col items-center lg:flex-row">
+        <div className="p-10 w-full lg:w-[50%]">
           <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="max-2-2xl mb-5 font-Ovo text-justify text-lg"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="max-2-2xl lg:mb-5 text-justify text-base md:text-lg"
           >
-            I am an Informatics Engineering graduate with an Associate Degree
-            from Politeknik Negeri Bandung who has an interest in web
-            development, especially in the field of Frontend Developer. I have
-            experience in entry-level web development, such as creating user
-            interfaces using frontend technologies like HTML, CSS, and
-            JavaScript, and working with frameworks like React.js and Next.js to
-            build interactive and responsive user experiences. I also understand
-            the basics of state management, API consumption, and the use of UI
-            libraries such as Tailwind CSS or Bootstrap.
+            I'm a passionate Frontend Developer with experience in building
+            responsive and interactive web applications. I've worked on projects
+            using modern technologies to create user-friendly interfaces. <br />
+            <br />
+            My skills include HTML, CSS, JavaScript, React.js, and Next.js,
+            along with knowledge of state management, API integration, and UI
+            libraries such as Tailwind CSS and Bootstrap. I'm eager to keep
+            learning and delivering clean, maintainable, and scalable solutions.
           </motion.p>
-
+        </div>
+        <div className="px-5 w-full lg:w-[50%]">
           <motion.ul
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="px-[5%] mb-12"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="px-[5%] mb-12 text-base md:text-lg"
           >
             <li className="flex gap-5 items-center mb-2">
-              <Image
-                src={assetList.world}
-                alt="world icon"
-                className="w-10 border-1 border-white rounded-full bg-white"
-              />
-              <p className="font-Ovo text-lg">Based in Bandung</p>
+              <div>
+                <div className="w-12 aspect-square flex items-center justify-center border rounded-full text-black border-gray-300 bg-white">
+                  <IoSchool size={25} />
+                </div>
+              </div>
+              <p>Diploma III - Informatics Engineering</p>
             </li>
             <li className="flex gap-5 items-center mb-2">
-              <Image
-                src={assetList.education}
-                alt="world icon"
-                className="w-11 border border-1 border-gray-300 p-1 rounded-full bg-white"
-              />
-              <p className="font-Ovo text-lg">Bandung State Polytechnic</p>
+              <div>
+                <div className="w-12 aspect-square flex items-center justify-center border rounded-full text-black border-gray-300 bg-white">
+                  <BiSolidSchool size={25} />
+                </div>
+              </div>
+              <p>Bandung State Polytechnic</p>
             </li>
             <li className="flex gap-5 items-center mb-2">
-              <Image
-                src={assetList.gmail}
-                alt="world icon"
-                className="w-10 border-1 border-white rounded-full bg-white"
-              />
-              <p className="font-Ovo text-lg">tubagusaji31@gmail.com</p>
+              <div>
+                <div className="w-12 aspect-square flex items-center justify-center border rounded-full text-black border-gray-300 bg-white">
+                  <IoLocationSharp size={25} />
+                </div>
+              </div>
+              <p>Based in Bandung</p>
+            </li>
+            <li className="flex gap-5 items-center mb-2">
+              <div>
+                <div className="w-12 aspect-square flex items-center justify-center border rounded-full text-black border-gray-300 bg-white">
+                  <MdEmail size={25} />
+                </div>
+              </div>
+              <p>tubagusaji31@gmail.com</p>
             </li>
           </motion.ul>
+        </div>
+      </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="mb-10 flex flex-col justify-center items-center"
-          >
-            <motion.h3
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="text-xl font-Ovo"
+      <div className="text-center w-full">
+        <motion.h3
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 1 }}
+          className="text-xl mb-10"
+        >
+          Tech Stack
+        </motion.h3>
+        <motion.ul
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 1.2 }}
+          className="grid px-[25%] text-black justify-items-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4"
+        >
+          {toolsData.map((tool, index) => (
+            <motion.li
+              whileHover={{ scale: 1.1 }}
+              key={index}
+              className="flex relative group aspect-square cursor-pointer items-center justify-center 
+                            rounded-full border border-gray-200 duration-500 hover:-translate-y-1 w-12 xl:w-16 dark:bg-slate-100"
             >
-              Find me on
-            </motion.h3>
-
-            <motion.ul
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex gap-4 my-4"
-            >
-              {socialMedia.map(({ icon, href }, index) => (
-                <motion.li
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
-                  key={index}
-                  className="rounded-full p-2 border-2 border-black dark:bg-slate-200"
-                >
-                  <a href={href} target="_blank">
-                    <Image
-                      src={icon}
-                      alt="icon-social-media"
-                      className="w-8 aspect-square"
-                    />
-                  </a>
-                </motion.li>
-              ))}
-            </motion.ul>
-          </motion.div>
-        </motion.div>
-      </motion.div>
+              <div
+                className={clsx(
+                  "text-xs bg-slate-100 px-3 py-1 rounded-xl absolute -top-3 -right-7 z-50 opacity-0 group-hover:opacity-100"
+                )}
+              >
+                {tool.name}
+              </div>
+              <Image src={tool.image} alt="Tool" className="w-8 xl:w-10" />
+            </motion.li>
+          ))}
+        </motion.ul>
+      </div>
     </motion.div>
   );
 };

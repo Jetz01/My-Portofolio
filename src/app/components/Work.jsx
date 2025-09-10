@@ -7,25 +7,19 @@ import { motion } from "motion/react";
 
 const Work = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      id="project"
-      className="w-full scroll-mt-20 px-[8%] sm:px-[12%] py-10"
-    >
+    <div id="project" className="w-full scroll-mt-20 px-[8%] sm:px-[12%] py-10">
       <motion.h2
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.7 }}
         className="text-center font-Ovo text-3xl"
       >
         Project
       </motion.h2>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 1.1 }}
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7, delay: 1 }}
         className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 my-10 gap-5 dark:text-black"
       >
         {workData.projects.map((project, index) => (
@@ -76,7 +70,7 @@ const Work = () => {
           </motion.div>
         ))}
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 
